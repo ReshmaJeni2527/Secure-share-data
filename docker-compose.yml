@@ -1,0 +1,11 @@
+# Only MongoDB. Run:  docker compose up -d
+services:
+  mongo:
+    image: mongo:7
+    container_name: scs-mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - scs_mongo_data:/data/db
+volumes:
+  scs_mongo_data:
